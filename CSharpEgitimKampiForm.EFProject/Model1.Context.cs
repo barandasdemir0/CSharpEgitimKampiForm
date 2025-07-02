@@ -29,5 +29,6 @@ namespace CSharpEgitimKampiForm.EFProject
         public virtual DbSet<Guide> Guides { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Admin> Admin { get; set; }
     }
 }

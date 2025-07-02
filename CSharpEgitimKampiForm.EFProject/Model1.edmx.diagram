@@ -5,11 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="a3e30e0e2a924280a03c00558b5eff1d" Name="Diagram1">
-        <EntityTypeShape EntityType="EgitimKampiEfTravelDbModel.Customer" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EgitimKampiEfTravelDbModel.Customer" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="EgitimKampiEfTravelDbModel.Guide" Width="1.5" PointX="1.25" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EgitimKampiEfTravelDbModel.Location" Width="1.5" PointX="3.625" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="EgitimKampiEfTravelDbModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EgitimKampiEfTravelDbModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5" IsExpanded="true" />
         <AssociationConnector Association="EgitimKampiEfTravelDbModel.FK_Location_Guide" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EgitimKampiEfTravelDbModel.Admin" Width="1.5" PointX="7.25" PointY="3.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
