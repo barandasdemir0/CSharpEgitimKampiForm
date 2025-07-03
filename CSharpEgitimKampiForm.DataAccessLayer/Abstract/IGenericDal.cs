@@ -11,7 +11,7 @@ namespace CSharpEgitimKampiForm.DataAccessLayer.Abstract
         
         void Insert(T entity); // T tipinde bir nesneyi ekler
         void Update(T entity); // T tipinde bir nesneyi günceller
-        void Delete(int id); // T tipinde bir nesneyi siler
+        void Delete(T entity); // T tipinde bir nesneyi siler
         List<T> GetAll(); // T tipinde nesnelerin listesini döndürür
         T GetById(int id); // T tipinde bir nesneyi id ile bulur
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CSharpEgitimKampiForm.PresentationLayer
 {
-    public partial class Form1 : Form
+    public partial class FrmCategory : Form
     {
-        public Form1()
+        public FrmCategory()
         {
             InitializeComponent();
         }
