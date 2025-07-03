@@ -20,18 +20,18 @@ namespace CSharpEgitimKampiForm.PresentationLayer
 
         private readonly ICategoryService _categoryService; // dependecy injection kullanarak service'i alıyoruz
 
-        public FrmCategory() 
+        public FrmCategory()
         {
             _categoryService = new CategoryManager(new EfCategoryDal()); // EfCategoryDal ile CategoryManager'ı başlatıyoruz
             InitializeComponent();
         }
 
-        
+
 
 
         private void btnList_Click(object sender, EventArgs e)
         {
-            var  categoryValues = _categoryService.TGetAll(); 
+            var categoryValues = _categoryService.TGetAll();
             dataGridView1.DataSource = categoryValues; // service'den gelen veriyi grid'e atıyoruz
         }
 
@@ -59,9 +59,10 @@ namespace CSharpEgitimKampiForm.PresentationLayer
             dataGridView1.DataSource = getByid;
         }
 
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-          
+
             int updatedId = int.Parse(txtId.Text);
             var value = _categoryService.TGetById(updatedId);
             value.CategoryName = txtAd.Text;
