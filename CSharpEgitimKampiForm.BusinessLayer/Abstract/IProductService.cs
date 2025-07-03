@@ -9,5 +9,6 @@ namespace CSharpEgitimKampiForm.BusinessLayer.Abstract
 {
     public interface IProductService:IGenericService<Product>
     {
+         List<object> GetProductsWithCategory();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,5 +18,8 @@ namespace CSharpEgitimKampiForm.EntityLayer.Concrete
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; } // Category sınıfı ile ilişki kuruyoruz. virtual keywordü ile lazy loading yapıyoruz.
         public List<Order> Orders { get; set; } // Order sınıfı ile ilişki kuruyoruz. Product'ın birden fazla siparişi olabilir.
+
+        //[NotMapped] // NotMapped attribute ile bu property'nin veritabanında bir kolon olarak yer almayacağını belirtiyoruz.
+        //public string CategoryName { get; set; }
     }
 }

@@ -9,5 +9,6 @@ namespace CSharpEgitimKampiForm.DataAccessLayer.Abstract
 {
     public interface IProductDal: IGenericDal<Product> // Product sınıfından nesneler alır
     {
+        List<Object> GetProductsWithCategory(); // Ürünleri kategori ile birlikte listelemek için bir metot tanımlıyoruz
     }
 }

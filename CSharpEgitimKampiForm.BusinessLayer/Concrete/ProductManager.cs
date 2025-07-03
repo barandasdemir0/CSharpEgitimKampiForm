@@ -17,6 +17,11 @@ namespace CSharpEgitimKampiForm.BusinessLayer.Concrete
             _productDal = productDal; // ProductDal'ı constructor ile alıyorum
         }// burada productdal'ı alıyorum ve bu productdal'ı kullanarak işlemlerimi yapacağım
 
+        public List<object> GetProductsWithCategory()
+        {
+            return _productDal.GetProductsWithCategory(); // ProductDal'daki GetProductsWithCategory metodunu çağırıyorum ve kategori ile birlikte ürünleri getiriyorum
+        }
+
         public void TDelete(Product entity)
         {
             _productDal.Delete(entity); // ProductDal'daki delete metodunu çağırıyorum ve silme işlemi yapıyorum
