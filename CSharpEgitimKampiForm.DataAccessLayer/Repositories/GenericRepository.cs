@@ -25,6 +25,7 @@ namespace CSharpEgitimKampiForm.DataAccessLayer.Repositories
         {
             var deletedEntity = context.Entry(entity); // context üzerinden entity'nin durumunu alıyoruz.
             deletedEntity.State = EntityState.Deleted;// EntityState.Deleted ile bu nesnenin silineceğini belirtiyoruz.
+            context.SaveChanges();
         }
 
         public List<T> GetAll()

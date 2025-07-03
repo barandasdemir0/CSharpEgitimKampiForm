@@ -4,35 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CSharpEgitimKampiForm.BusinessLayer.Abstract;
+using CSharpEgitimKampiForm.DataAccessLayer.Abstract;
 using CSharpEgitimKampiForm.EntityLayer.Concrete;
 
 namespace CSharpEgitimKampiForm.BusinessLayer.Concrete
 {
     public class ProductManager : IProductService
     {
+        private readonly IProductDal _productDal;// Dependency injection ile productdal'ı alıyorum
+        public ProductManager(IProductDal productDal)
+        {
+            _productDal = productDal; // ProductDal'ı constructor ile alıyorum
+        }// burada productdal'ı alıyorum ve bu productdal'ı kullanarak işlemlerimi yapacağım
+
         public void TDelete(Product entity)
         {
-            throw new NotImplementedException();
+            _productDal.Delete(entity); // ProductDal'daki delete metodunu çağırıyorum ve silme işlemi yapıyorum
         }
 
         public List<Product> TGetAll()
         {
-            throw new NotImplementedException();
+            return _productDal.GetAll();// ProductDal'daki GetAll metodunu çağırıyorum ve tüm ürünleri getiriyorum
         }
 
         public Product TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _productDal.GetById(id); // ProductDal'daki GetById metodunu çağırıyorum ve id'ye göre ürünü getiriyorum
         }
 
         public void TInsert(Product entity)
         {
-            throw new NotImplementedException();
+            _productDal.Insert(entity); // ProductDal'daki Insert metodunu çağırıyorum ve ekleme işlemi yapıyorum
         }
 
         public void TUpdate(Product entity)
         {
-            throw new NotImplementedException();
+            _productDal.Update(entity); // ProductDal'daki Update metodunu çağırıyorum ve güncelleme işlemi yapıyorum
         }
     }
 }
